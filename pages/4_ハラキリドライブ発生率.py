@@ -44,7 +44,7 @@ df = CsvDf(columns=columns_drive,
 st.subheader("超革命中のハラキリドライブ発生率")
 st.caption("・超革命ラッシュのセットゲーム数をカウントし、ハラキリドライブ発生率を算出")
 st.caption("・表記1400枚を超えるとドライブ確率が切り替わると言われているので、分けてカウントする機能を追加")
-
+st.write("・設定6で1/4、設定1で1/10～15くらい")
 ##### 表記1400枚未満のカウント処理
 with st.form(key="under1400_drive_count"):
     st.write("表記1400枚未満")

@@ -26,6 +26,11 @@ index_drive = ["出現回数"]
 data_drive = [[0,0,0,0,0,0]]
 path_drive = "./pages/drive_count_df.csv"
 
+#マリエ覚醒のカウント用
+columns_marie = ["マリエ覚醒"]
+index_marie = ["出現回数"]
+data_marie = [[0]]
+path_marie = "./pages/marie_count_df.csv"
 
 ##################################################
 ##### 新規作成ボタンを押すとデータをすべてリセットする
@@ -80,9 +85,19 @@ with st.form(key='new_play'):
         drive_df.to_csv(path_drive)
         # st.dataframe(drive_df)
 
+        #####マリエ覚醒のカウント用
+        marie_df = pd.DataFrame(data_marie,
+                                             index=index_marie,
+                                             columns=columns_marie)
+        marie_df.to_csv(path_marie)
+
 
 ########################################
 ##### バージョン情報 ####################
 ########################################
+st.caption("ver2.1.0")
+st.caption("   ・マリエ覚醒のページを追加")
+st.caption("   ・ドライブ確率の参考情報を追記")
+st.caption("   ・ミミズの情報を追記")
 st.caption("ver2.0.0")
 st.caption("   ・新規作成")
